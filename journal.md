@@ -11,3 +11,6 @@
 
 ## Jeudi 12 Novembre
 - Création base de données
+- Initialisation Composer
+- Structuration projet
+- Utilisation env

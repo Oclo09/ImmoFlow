@@ -13,3 +13,11 @@ Il permet de gérer des appartements dans un immeuble contenant par exemple le p
 - Visual Studio 2022
 - phpMyAdmin,
 - Apache (localhost)
+
+## Installation
+
+- Copier le fichier exemple '/config/env/.env.example' à la racine et mettre les bonnes valeures dans les crochets
+
+```bash
+cp /config/env/.env.exemple ./.env
+```

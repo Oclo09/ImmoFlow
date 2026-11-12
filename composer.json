@@ -1,0 +1,15 @@
+{
+    "name": "nathanrchrd/immoflow",
+    "description": "Application API web de gestion d'appartements",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nathanrchrd\\Immoflow\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.8"
+    }
+}
