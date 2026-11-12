@@ -8,3 +8,6 @@
 - Résoudre conflit GitLab / Github
 - Création répertoire Gitlab
 - Ajout documentation du projet
+
+## Jeudi 12 Novembre
+- Création base de données
