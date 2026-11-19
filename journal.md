@@ -15,3 +15,6 @@
 - Structuration projet
 - Utilisation env
 - Création vhost
+
+## Jeudi 12 Novembre
+- Implémentation Slim

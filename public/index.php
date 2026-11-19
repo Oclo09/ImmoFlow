@@ -1,15 +1,19 @@
 <?php
-require_once __DIR__ . '/../src/Config/env.php';
-$appName = $_ENV['APP_NAME']
+// use Nathanrchrd\Immoflow\Services\Database;
+use Slim\Factory\AppFactory;
+
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/Config/env.php';
+
+// $pdo = Database::getConnection();
+
+$app = AppFactory::create();
+$app->addRoutingMiddleware();
+$app->addBodyParsingMiddleware();
+$app->addErrorMiddleware(true, true, true);
+
+$routes = require __DIR__ . '/../src/Routes/routes.php';
+$routes($app);
+
+$app->run();
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $appName; ?></title>
-</head>
-<body>
-    <h1><?= $appName; ?></h1>
-</body>
-</html>
