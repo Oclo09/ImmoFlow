@@ -18,3 +18,4 @@
 
 ## Jeudi 12 Novembre
 - Implémentation Slim
+- Configuraton PDO

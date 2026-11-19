@@ -1,11 +1,11 @@
 <?php
-// use Nathanrchrd\Immoflow\Services\Database;
+use Nathanrchrd\Immoflow\Services\Database;
 use Slim\Factory\AppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../src/Config/env.php';
 
-// $pdo = Database::getConnection();
+$pdo = Database::getConnection();
 
 $app = AppFactory::create();
 $app->addRoutingMiddleware();
