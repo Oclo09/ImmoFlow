@@ -74,7 +74,7 @@ class Locataire
             } else {
                 $idAppart = null;
             }
-            
+
             $locataires[] = new self((int) $row["id"], $idAppart, $row["loueLe"], $row["nom"], $row["prenom"], $row["email"], $row["numTel"]);
         }
         

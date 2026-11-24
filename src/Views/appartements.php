@@ -27,6 +27,7 @@ function afficherTableauApparts(array $appartements): string {
         Liste des appartements
     </h1>
     <a href="http://immoflow.local">Retour</a>
+    <a href="http://immoflow.local/ajouter">Ajouter</a>
     <hr>
     <div><?= afficherTableauApparts($appartements) ?></div>
 </body>

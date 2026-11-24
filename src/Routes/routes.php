@@ -10,4 +10,6 @@ return function (App $app) {
     $app->get('/appartement/{id}', [AppartementController::class, 'getApartById']);
     $app->get('/locataires', [LocataireController::class, 'getAllLocataires']);
     $app->get('/locataire/{id}', [LocataireController::class, 'getLocataireById']);
+    $app->get('/ajouter', [AppartementController::class, 'showForm']);
+    $app->post('/ajouter', [AppartementController::class, 'addAppart']);
 };

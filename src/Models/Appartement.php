@@ -87,4 +87,19 @@ class Appartement
         
         return new self((int) $row["id"], $row["numero"], (int) $row["nbrPiece"], (int) $row["prixLocation"], $row["statut"], $row["creeLe"]);
     }
+
+    public static function ajouterUnAppart(string $numero, int $nbrPiece, int $prixLocation, string $statut): void 
+    {
+        $sql = "INSERT INTO appartement (numero, nbrPiece, prixLocation, statut, creeLe) 
+                VALUES (:numero, :nbrPiece, :prixLocation, :statut, NOW())";
+        
+        $params = [
+            'numero' => $numero,
+            'nbrPiece' => $nbrPiece,
+            'prixLocation' => $prixLocation,
+            'statut' => $statut
+        ];
+
+        $statement = Database::dbRun($sql, $params);
+    }
 }

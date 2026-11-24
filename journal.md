@@ -24,3 +24,4 @@
 - Mise en place controllers
 - Affichage appartement(s)
 - Affichage locataire(s)
+- Ajout appartement

@@ -30,4 +30,21 @@ class AppartementController extends RenderController
             'appartement' => $appartement,
         ]);
     }
+
+    public function showForm(Request $request, Response $response): Response {
+        return $this->render($response, 'ajouter');
+    }
+
+    public function addAppart(Request $request, Response $response): Response {
+        $data = $request->getParsedBody();
+
+        $numero = trim($data['numero']);
+        $nbrPiece = (int)$data['nbrPiece'];
+        $prixLocation = (int)$data['prixLocation'];
+        $statut = $data['statut'];
+
+        Appartement::ajouterUnAppart($numero, $nbrPiece, $prixLocation, $statut);
+
+        return $response->withHeader('Location', '/appartements')->withStatus(302);
+    }
 }
