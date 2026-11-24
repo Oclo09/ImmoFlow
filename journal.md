@@ -20,5 +20,6 @@
 - Implémentation Slim
 - Configuraton PDO
 
-## Lundi 24 Novembre
+## Mardi 24 Novembre
 - Mise en place controllers
+- Affichage Appartement(s)

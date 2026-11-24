@@ -12,5 +12,7 @@ $appName = $_ENV['APP_NAME']
 </head>
 <body>
     <h1><?= $page; ?></h1>
+    <a href="http://immoflow.local/appartements">Vers liste d'appartements</a>
+    <p>Vers liste locataires</p>
 </body>
 </html>
