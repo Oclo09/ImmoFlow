@@ -25,3 +25,4 @@
 - Affichage appartement(s)
 - Affichage locataire(s)
 - Ajout appartement
+- Configuration docker
