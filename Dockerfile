@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y unzip git \
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-COPY ./docker/apache/immoflow.local.conf /etc/apache2/sites-available/immoflow.local.conf
+COPY ./config/vhost/immoflow.local.conf /etc/apache2/sites-available/immoflow.local.conf
 RUN a2dissite 000-default.conf && a2ensite immoflow.local.conf
 
 WORKDIR /var/www/html
