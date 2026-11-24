@@ -1,10 +1,10 @@
 <?php
 namespace Nathanrchrd\Immoflow\Models;
-use Nathanrchrd\Immoflow\Services\Database;
 
+use Nathanrchrd\Immoflow\Services\Database;
 use PDO;
 
-class Equipes
+class Appartement
 {
     private int $id;
     private string $numero;
@@ -15,11 +15,41 @@ class Equipes
 
     public function __construct(int $id, string $numero, int $nbrPiece, int $prixLocation, string $statut, string $creeLe) {
         $this->id = $id;
-        $this->$numero = $numero;
-        $this->$nbrPiece = $nbrPiece;
+        $this->numero = $numero;
+        $this->nbrPiece = $nbrPiece;
         $this->prixLocation = $prixLocation;
         $this->statut = $statut;
         $this->creeLe = $creeLe;
+    }
+
+    public function getId(): int 
+    {
+        return $this->id;
+    }
+
+    public function getNumero(): string 
+    {
+        return $this->numero;
+    }
+
+    public function getNbrPiece(): int 
+    {
+        return $this->nbrPiece;
+    }
+
+    public function getPrixLocation(): int 
+    {
+        return $this->prixLocation;
+    }
+
+    public function getStatut(): string 
+    {
+        return $this->statut;
+    }
+
+    public function getCreeLe(): string 
+    {
+        return $this->creeLe;
     }
 
     public static function lireTousLesAppartements(): array
@@ -32,23 +62,23 @@ class Equipes
 
         $appartements = [];
         foreach($rows as $row) {
-            $appartements = new self((int) $row["id"], $row["numero"], (int) $row["nbrPiece"], (int) $row["prixLocation"], $row["statut"], $row["creeLe"]);
+            $appartements[] = new self((int) $row["id"], $row["numero"], (int) $row["nbrPiece"], (int) $row["prixLocation"], $row["statut"], $row["creeLe"]);
         }
         
         return $appartements;
     }
 
-    public static function lireUnAppartements(int $id): ?self
+    public static function lireUnAppartement(int $id): ?self
     {
         $sql = "SELECT id, numero, nbrPiece, prixLocation, statut, creeLe
                 FROM appartement
                 WHERE id = :id";
         
         $param = [
-            ":id" => $id
+            "id" => $id
         ];
 
-        $statement = Database::dbRun($sql, $id);
+        $statement = Database::dbRun($sql, $param);
         $row = $statement->fetch();
 
         if ($row == false) {

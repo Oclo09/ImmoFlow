@@ -10,7 +10,8 @@ class AccueilController
     // PSR-7 ( De type de rêquetes, donc, on attend une demande /GET et un format de reponse
     public function index(Request $request, Response $response): Response
     {
-        $titrePage = 'Accueil';
+        $page = 'Accueil';
+
         ob_start();
         include dirname(__DIR__, 2) . '/src/Views/accueil.php';
         $response->getBody()->write(ob_get_clean());

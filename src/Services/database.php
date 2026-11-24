@@ -3,6 +3,7 @@ namespace Nathanrchrd\Immoflow\Services;
 
 use PDO;
 use PDOException;
+use PDOStatement;
 use RuntimeException;
 
 class Database
@@ -49,7 +50,7 @@ class Database
     */
     public static function dbRun($sql, $param = null) : PDOStatement
     {
-        $statement = getConnection()->prepare($sql);
+        $statement = self::getConnection()->prepare($sql);
         
         $statement->execute($param);
         

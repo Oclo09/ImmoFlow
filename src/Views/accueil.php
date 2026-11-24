@@ -11,6 +11,6 @@ $appName = $_ENV['APP_NAME']
     <title><?= $appName; ?></title>
 </head>
 <body>
-    <h1><?= $titrePage; ?></h1>
+    <h1><?= $page; ?></h1>
 </body>
 </html>

@@ -19,3 +19,6 @@
 ## Jeudi 12 Novembre
 - Implémentation Slim
 - Configuraton PDO
+
+## Lundi 24 Novembre
+- Mise en place controllers
