@@ -22,4 +22,5 @@
 
 ## Mardi 24 Novembre
 - Mise en place controllers
-- Affichage Appartement(s)
+- Affichage appartement(s)
+- Affichage locataire(s)
